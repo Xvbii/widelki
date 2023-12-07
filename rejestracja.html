@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WidełkiPRO.com</title>
+    <style>
+        body, html {
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            font-family: 'Inter', sans-serif;
+        }
+
+        #kwadrat{
+
+        position: relative;
+        width: 500px;
+        height: 540px;
+        margin-left: auto;
+        margin-right: auto;
+        top: 200px;
+
+        background: #DFCAAA;
+        }
+
+        #logo {
+            display: flex;
+            align-items: center;
+            
+            font-weight: 200;
+            font-size: 55px;
+            color: #000000;
+        }
+
+        #logo img {
+            margin-right: 5px; /* Zmniejszyłem odstęp między obrazkiem a tekstem */
+            height: 80px; /* Zmniejszyłem wysokość obrazka */
+        }
+
+        #logo #pro {
+            font-weight: 400;
+            color: #FBB54B; /* Ustawiony kolor dla PRO na FBB54B */
+        }
+
+        #napis {
+            padding: 10px 110px;
+        }
+
+        #tabela {
+            width: 100%;
+            height: 100%;
+            border-collapse: collapse;
+        }
+
+        .tede {
+            width: 25%;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .guzik1 {
+            width: 80%;
+            height: 50px;
+            background: #617DDF;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            margin: 10px;
+            transition-duration: 0.4s;
+        }
+
+        .guzik1:hover {
+            background-color: #869ae4;
+        }
+
+        #napisguzik1 {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 26px;
+            margin-top: 12px;
+        }
+
+        .input {
+            width: 80%;
+            height: 50px;
+            background: #FFFFFF;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            margin: 10px;
+            transition-duration: 0.4s;
+        }
+
+        #napisinput {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 26px;
+            margin-top: 12px;
+            text-align: center;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            .tede {
+                width: 100%;
+                height: auto;
+                display: block;
+                text-align: center;
+            }
+        }
+
+        .show-error input:invalid {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="kwadrat">
+        <div id="napis">
+            <H1 id="logo"><img src="widly2 1.png">idełki<b id="pro">PRO</b></H1>
+        </div>
+
+        <div id="wpisy">
+            <table id="tabela">
+                <tr>
+                    <td class="tede">
+                        <form id="forumRejes">
+                            <input type="text" name="imie" pattern="^[a-zA-Z]+$" placeholder="Login" minlength="3" required class="input" id="napisinput"><br><br>
+                    
+                            <input type="text" name="nazwisko" pattern="^[a-zA-Z]+$" placeholder="Hasło" minlength="3" required class="input" id="napisinput"><br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tede">
+                            <input type="submit" value="ZAREJESTRUJ" class="guzik1" id="napisguzik1" onclick="logowanie()">
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        function logowanie() {
+            var form = document.getElementById("forumRejes");
+            form.classList.add("show-error");
+        }
+    </script>
+</body>
+
+</html>

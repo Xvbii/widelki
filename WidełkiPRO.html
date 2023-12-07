@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WidełkiPRO.com</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            font-family: 'Inter', sans-serif;
+        }
+
+        #pasek1 {
+            position: fixed;
+            top: 0;
+            float: left;
+            width: 100%;
+            height: 100px;
+            background: #DFCAAA;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px; /* Dodałem wypełnienie na lewo i prawo dla odstępu od krawędzi */
+        }
+
+        #logo {
+            display: flex;
+            align-items: center;
+        }
+
+        #logo img {
+            margin-right: 5px; /* Zmniejszyłem odstęp między obrazkiem a tekstem */
+            height: 80px; /* Zmniejszyłem wysokość obrazka */
+        }
+
+        #logo #pro {
+            font-weight: 400;
+            color: #FBB54B; /* Ustawiony kolor dla PRO na FBB54B */
+        }
+
+        #pasek2 {
+            margin-top: 100px;
+            float: left;
+            width: 100%;
+            height: 100px;
+            background: #CEBB9E;
+        }
+
+        #okienko {
+            width: 100%;
+            height: 1500px;
+            border: none;
+        }
+
+        #footercontainer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 70px;
+            background: #DFCAAA;
+            overflow: hidden;
+        }
+
+        #footer {
+            position: fixed;
+            bottom: 0;
+            float: left;
+            width: 55%;
+            height: 70px;
+            background: #DFCAAA;
+        }
+
+        #footer2 {
+            position: fixed;
+            bottom: 0;
+            float: left;
+            width: 45%;
+            height: 70px;
+            margin-left: 55%;
+            background: #DFCAAA;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+        }
+
+        #tabela {
+            width: 100%;
+            height: 100%;
+            border-collapse: collapse;
+        }
+
+        .tede {
+            width: 25%;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .guzik1 {
+            width: 80%;
+            height: 50px;
+            background: #FFFFFF;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            margin: 10px;
+            transition-duration: 0.4s;
+        }
+
+        .guzik1:hover {
+            background-color: #e8e8e8;
+        }
+
+        #napisguzik1 {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 26px;
+            margin-top: 12px;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            .tede {
+                width: 100%;
+                height: auto;
+                display: block;
+                text-align: center;
+            }
+
+            .guzik1 {
+                width: 80%;
+                margin: 10px auto;
+                float: left;
+            }
+
+            #pasek2 {
+                margin-top: 100px;
+                float: left;
+                width: 100%;
+                height: auto;
+                background: #CEBB9E;
+            }
+        }
+
+        #smedia {
+            margin: 5px auto;
+            float: left;
+        }
+
+        #contact {
+            float: left;
+            margin-left: 10px;
+            margin-right: 5px;
+            font-size: 36px;
+        }
+
+        #ikonyprawo {
+            margin-left: 5px;
+            float: left;
+        }
+
+        #kreska {
+            margin: 5px auto;
+            border-left: 1px solid black;
+            height: 60px;
+            float: left;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        #footer2 #ikonyprawo,
+        #footer2 #contact {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        #logo {
+            font-weight: 200;
+            font-size: 55px;
+            color: #000000;
+        }
+
+        #logowanie {
+        position: absolute;
+        left: 1700px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="pasek1">
+        <H1 id="logo"><img src="widly2 1.png">idełki<b id="pro">PRO</b></H1>
+        <div id="logowanie">
+            <img src="Shopping Basket.png" id="smedia"><div id="kreska"></div>
+            <a href="logowanie.html"><img src="Account.png" id="smedia"></a><div id="kreska"></div>
+            <img src="Logout.png" id="smedia">
+        </div>
+    </div>
+
+    <div id="pasek2">
+        <table id="tabela">
+            <tr>
+                <td class="tede">
+                    <form action="nowosci.html" target="myFrame">
+                        <button class="guzik1"><p id="napisguzik1">NOWOŚCI</p></button>
+                    </form>
+                </td>
+                <td class="tede">
+                    <form action="promocje.html" target="myFrame">
+                        <button class="guzik1"><p id="napisguzik1">PROMOCJE</p></button>
+                    </form>
+                </td>
+                <td class="tede">
+                    <form action="wyprzedaze.html" target="myFrame">
+                        <button class="guzik1"><p id="napisguzik1">WYPRZEDAŻE</p></button>
+                    </form>
+                </td>
+                <td class="tede">
+                    <form action="zestawy.html" target="myFrame">
+                        <button class="guzik1"><p id="napisguzik1">ZESTAWY</p></button>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <iframe name="myFrame" id="okienko" src="polecane.html" scrolling="no">
+    </iframe>
+
+    <div id="footercontainer">
+
+        <div id="footer">
+            <a href="https://www.facebook.com"><img src="Facebook.png" id="smedia"></a> <div id="kreska"></div>
+            <a href="https://www.instagram.com"><img src="Instagram.png" id="smedia"></a> <div id="kreska"></div>
+            <a href="https://www.twitter.com"><img src="TwitterX.png" id="smedia"></a> <div id="kreska"></div>
+            <a href="https://www.tiktok.com"><img src="TikTok.png" id="smedia"></a>
+        </div>
+
+        <div id="footer2">
+            <div id="ikonyprawo">
+                <img src="Phone.png">
+            </div>
+            <div id="contact">
+                <p>529 492 784</p>
+            </div>
+            <div id="kreska"></div>
+
+            <div id="ikonyprawo">
+                <img src="Email.png">
+            </div>
+            <div id="contact">
+                <p>widelkipro@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
